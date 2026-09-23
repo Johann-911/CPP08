@@ -1,0 +1,25 @@
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
+
+#include <vector>
+#include <iostream>
+#include <string>
+#include <exception>
+#include <stdbool.h>
+#include <climits>
+#include <utility>
+#include <cmath>
+#include <stdexcept>
+#include <algorithm>
+#include <stdexcept>
+
+template <typename T> typename T::iterator easyfind(T& container, int value)
+{
+    typename T::iterator result;
+    result = std::find(container.begin(), container.end(), value);
+    if(result == container.end())    
+        throw std::runtime_error("Value not found");
+    return result;
+}
+
+#endif
