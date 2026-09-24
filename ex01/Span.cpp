@@ -33,7 +33,6 @@ void Span::addNumber(int number)
     _values.push_back(number); 
 }
 
-
 int Span::shortestSpan()
 {
     if(_values.size() < 2)

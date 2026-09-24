@@ -28,6 +28,17 @@ class Span
         ~Span();
 
         void addNumber(int number);
+
+        template <typename T> 
+        void addNumber(T begin, T end)
+        {
+            while(begin != end)
+            {
+                addNumber(*begin); 
+                begin++;
+            }   
+        }
+        
         int shortestSpan();
         int longestSpan();
 };
